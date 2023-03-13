@@ -1,16 +1,11 @@
 import React from "react";
-
-type PersonProps = {
-  name: {
-    first: string;
-    last: string;
-  };
-};
+import { PersonProps } from "./Person.types";
 
 function Person(props: PersonProps) {
+  const { first, last } = props.name;
   return (
     <div>
-      {props.name.first} {props.name.last}
+      {first} {last}
     </div>
   );
 }

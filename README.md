@@ -167,3 +167,33 @@ Container.tsx
     function Container(props: ContainerProps) {
       return <div style={props.styles}>Container</div>;
     }
+
+# Props Type and Tips
+
+When we have a lot more types to work with
+
+Person.types.ts
+
+    export type Name = {
+      first: string;
+      last: string;
+    };
+
+    export type PersonProps = {
+      name: Name;
+    };
+
+Person.tsx
+
+    import { PersonProps } from "./Person.types";
+
+    function Person(props: PersonProps) {
+      const { first, last } = props.name;
+      return (
+        <div>
+          {first} {last}
+        </div>
+      );
+    }
+
+    export default Person;

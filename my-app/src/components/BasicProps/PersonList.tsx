@@ -1,11 +1,7 @@
-import { type } from "os";
-import React from "react";
+import { Name } from "./Person.types";
 
 type PersonListProps = {
-  names: {
-    first: string;
-    last: string;
-  }[];
+  names: Name[];
 };
 
 function PersonList(props: PersonListProps) {
