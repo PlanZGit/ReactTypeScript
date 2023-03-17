@@ -8,6 +8,10 @@ import Status from "./components/AdvancedProps/Status";
 import Button from "./components/EventProps/Button";
 import Input from "./components/EventProps/Input";
 import Container from "./components/StyleProps/Container";
+import { ThemeContextProvider } from "./components/useContext/ThemeContext";
+import Box from "./components/useContext/Box";
+import { UserContextProvider } from "./components/useContext/UserContext";
+import { User } from "./components/useContext/User";
 
 function App() {
   const personName = {
@@ -53,6 +57,14 @@ function App() {
 
       {/* Styles Props*/}
       <Container styles={{ border: "2px solid black", padding: "1rem" }} />
+
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 # ReactTypeScript
 
+open component file and check comments
 Read introduction [Intro.md](./Intro.md) on the why and what.
 
 # Getting Started
